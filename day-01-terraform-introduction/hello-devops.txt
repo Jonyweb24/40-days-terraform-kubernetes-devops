@@ -1,0 +1,7 @@
+Welcome to 40 Days DevOps Learning!
+
+Day: 01
+Topic: Terraform Introduction
+
+I am learning Infrastructure as Code.
+Terraform helps automate infrastructure.
