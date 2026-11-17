@@ -1,0 +1,10 @@
+Deployment Summary
+
+Project File:
+./project-info.txt
+
+Deployment Configuration:
+./deployment-config.txt
+
+Server Details:
+./server-details.txt

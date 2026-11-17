@@ -1,0 +1,6 @@
+Project Name: DevOps Infrastructure
+Learning Day:02
+Tool: terraform
+
+Purpose:
+Learning HCL,Providers and Resources.

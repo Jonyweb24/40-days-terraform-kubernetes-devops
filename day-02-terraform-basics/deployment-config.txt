@@ -1,0 +1,6 @@
+Application: DevOPs Deployment
+Environment: Development
+Deployment Tool: Terraform
+
+Container Runtime: Docker
+Orchestration: Kubernetes

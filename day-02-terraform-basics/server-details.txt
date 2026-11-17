@@ -1,0 +1,4 @@
+Server Name: devops-local-server
+Operating System; Ubuntu
+Purpose: Terraform Practice
+Status: Learning Environment 
