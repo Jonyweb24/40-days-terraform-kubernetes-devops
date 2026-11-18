@@ -1,0 +1,8 @@
+PROJECT SUMMARY
+
+Project Name: E-commerce Platform
+Environment: development
+Application: ecommerce-api
+
+Application Port: 3000
+Monitoring Enabled: true

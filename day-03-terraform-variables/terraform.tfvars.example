@@ -1,0 +1,26 @@
+
+project_name     = "My Application"
+environment = "development"
+application_name = "my-api"
+application_port = 3000
+
+enable_monitoring = true
+
+services = [
+  "frontend",
+  "backend",
+  "database"
+]
+
+service_ports = {
+  frontend = 3000
+  backend  = 5000
+  database = 5432
+}
+
+application = {
+  name       = "my-api"
+  version    = "1.0.0"
+  replicas   = 2
+  monitoring = true
+}

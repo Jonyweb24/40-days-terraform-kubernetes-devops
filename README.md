@@ -28,3 +28,43 @@ A hands-on DevOps learning journey using WSL2 Ubuntu.
 - Practiced init, fmt, validate, plan and apply
 - Inspected Terraform state
 - Practiced debugging
+
+## Day 2:
+
+
+
+
+## Day 3
+
+## Day 03 — Terraform Variables and Outputs
+
+### Topics Covered
+- Input variables
+- String, number and bool
+- List, map and object
+- Variable validation
+- terraform.tfvars
+- Variable override
+- Variable precedence
+- Terraform outputs
+
+### Practical Project
+Created a dynamic DevOps environment generator.
+
+Generated files:
+- project-summary.txt
+- deployment-config.txt
+- infrastructure-details.txt
+
+### Commands Practiced
+- terraform fmt
+- terraform init
+- terraform validate
+- terraform plan
+- terraform apply
+- terraform output
+- terraform output -json
+
+### Key Learning
+The same Terraform configuration can use different
+input values without changing the resource code.

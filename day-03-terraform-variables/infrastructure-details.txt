@@ -1,0 +1,12 @@
+INFRASTRUCTURE DETAILS
+
+Project: E-commerce Platform
+
+Services:
+frontend
+backend
+database
+redis
+
+Service Ports:
+{"backend":5000,"database":5432,"frontend":3000,"redis":6379}

@@ -75,3 +75,16 @@ resource "local_file" "another_project_info" {
   filename = "another.txt"
   content  = "Test"
 }
+
+#Self Assessment
+
+resource "local_file" "student-details" {
+  filename = "${path.module}/student-details.txt"
+
+  content = <<-EOT
+Name: Jony
+Skill: DevOps
+Learning: Terraform
+Goal: Junior DevOps Engineer
+EOT
+}

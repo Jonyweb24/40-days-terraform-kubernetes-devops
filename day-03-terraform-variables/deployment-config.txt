@@ -1,0 +1,9 @@
+DEPLOYMENT CONFIGURATION
+
+Project: E-commerce Platform
+Environment: development
+
+Application Name: ecommerce-api
+Application Version: 2.1.0
+Replicas: 2
+Monitoring: true

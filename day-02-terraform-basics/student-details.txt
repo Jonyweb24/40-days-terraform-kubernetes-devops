@@ -1,0 +1,4 @@
+Name: Jony
+Skill: DevOps
+Learning: Terraform
+Goal: Junior DevOps Engineer
