@@ -54,3 +54,82 @@ Symptom: Inspecting the applied local_file resources showed "content_base64": nu
 **Root Cause:** WSL2 CLI lacks a native terminal image viewer by default unless bridged to Windows GUI apps.
 
 **Solution:** Opened the generated PNG directly in the Windows default image viewer from WSL2 using explorer.exe terraform-graph.png.
+## DAy 3
+
+# Day 03 — Terraform Variables, Outputs & Git Troubleshooting Log
+
+## 1. Typo & Syntax Errors in `outputs.tf`
+
+**Issue:** Invalid argument name and undeclared variable reference inside `outputs.tf`.
+
+**Symptom:**
+```text
+Error: Unsupported argument (valur)
+Error: Reference to undeclared input variable (var.sercice_ports)
+Root Cause: Minor spelling mistakes in outputs.tf — valur was written instead of value, and var.sercice_ports was referenced instead of var.service_ports.
+
+Solution:
+
+Replaced valur with value in the application_port output block.
+
+Corrected var.sercice_ports to var.service_ports to match variables.tf.
+
+Verified the syntax using terraform fmt and terraform validate.
+
+2. Invalid validation Block Syntax in variables.tf
+Issue: Incorrect argument formatting inside the application_port variable validation block.
+
+Symptom:
+
+Plaintext
+Error: Missing required argument: The argument "error_message" is required, but no definition was found.
+Error: Unsupported argument: An argument named "error-message" is not expected here. Did you mean "error_message"?
+Root Cause: Used a hyphen (error-message) instead of an underscore (error_message) inside the validation block.
+
+Solution: Updated the validation block in variables.tf to use error_message with an underscore:
+
+Terraform
+validation {
+  condition     = var.application_port >= 1 && var.application_port <= 65535
+  error_message = "Application port must be between 1 and 65535."
+}
+3. Missing Required Provider (hashicorp/local)
+Issue: Terraform failed to validate or execute configuration due to a missing local provider plugin.
+
+Symptom:
+
+Plaintext
+Error: Missing required provider
+This configuration requires provider registry.terraform.io/hashicorp/local, but that provider isn't available.
+Root Cause: Working inside a new project directory (day-03-terraform-variables) where the required provider plugin had not yet been downloaded and initialized.
+
+Solution: Ran terraform init inside day-03-terraform-variables to download and install the hashicorp/local provider before running terraform validate and terraform apply.
+
+4. terraform apply Showing 0 added Instead of 3 added
+Issue: Running terraform apply reported zero resources added despite expecting fresh file generation.
+
+Symptom:
+
+Plaintext
+No changes. Your infrastructure matches the configuration.
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+Root Cause: Terraform tracks resource state in terraform.tfstate. Because the three .txt files were already generated on a previous run and matched the current code, Terraform skipped recreating them.
+
+Solution: Removed the generated .txt files (rm project-summary.txt deployment-config.txt infrastructure-details.txt) or ran terraform destroy first, then executed terraform apply -auto-approve to observe Resources: 3 added.
+
+5. Generated .txt and Lock Files Appearing in git status
+Issue: Auto-generated output files and Terraform lock files were tracked or staged by Git.
+
+Symptom: After running git add ., generated files (*.txt) and .terraform.lock.hcl appeared as staged/untracked files in git status.
+
+Root Cause: .gitignore lacked rules to ignore generated .txt output files and lock files, or files were staged before updating .gitignore.
+
+Solution:
+
+Unstaged all staged files using git reset.
+
+Added *.txt, *.tfvars, *.tfstate*, .terraform/, and .terraform.lock.hcl to .gitignore.
+
+Verified ignore rules using git check-ignore -v day-03-terraform-variables/terraform.tfvars.
+
+Re-staged and committed only source code, .tfvars.example, and documentation files.
