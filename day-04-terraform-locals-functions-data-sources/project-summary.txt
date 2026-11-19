@@ -1,0 +1,16 @@
+PROJECT SUMMARY
+================
+
+Project: Ecommerce project running in Development environment
+Project Name: ecommerce
+Environment: development
+Deployment ID: ecommerce-development-v1.0.0
+Total Services: 4
+
+Service Names:
+ecommerce-development-frontend
+ecommerce-development-backend
+ecommerce-development-database
+ecommerce-development-redis
+
+Monitoring: ENABLED

@@ -1,0 +1,24 @@
+===================================
+       DEVOPS DEPLOYMENT PLAN
+===================================
+
+Project Name: {{PROJECT_NAME}}
+
+Environment: {{ENVIRONMENT}}
+
+Deployment ID: {{DEPLOYMENT_ID}}
+
+Application Version: {{APP_VERSION}}
+
+Application Port: {{APP_PORT}}
+
+Monitoring: {{MONITORING_STATUS}}
+
+Total Services: {{TOTAL_SERVICES}}
+
+Services:
+{{SERVICES}}
+
+===================================
+          END OF CONFIG
+===================================
