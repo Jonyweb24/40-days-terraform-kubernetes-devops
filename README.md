@@ -1,5 +1,5 @@
 # 40 Days of Terraform, Kubernetes and DevOps
-40 Days of Hands-on DevOps Learning: Terraform, Kubernetes, CI/CD and Monitoring
+## 40 Days of Hands-on DevOps Learning: Terraform, Kubernetes, CI/CD and Monitoring
 - A hands-on DevOps learning journey using WSL2 Ubuntu.
 ## Learning Roadmap
 
