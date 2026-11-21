@@ -1,0 +1,9 @@
+SERVICE CONFIGURATION 
+
+Service Name: backend
+
+Service Port: 3000
+
+Project: ecommerce
+
+Environment: development

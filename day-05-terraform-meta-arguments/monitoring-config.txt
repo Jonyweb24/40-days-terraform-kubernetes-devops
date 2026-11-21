@@ -1,0 +1,9 @@
+MONITORING CONFIGURATION 
+       
+Monitoring: ENABLED
+
+Project: ecommerce
+       
+Environment: development
+
+Deployment Tier: STANDARD

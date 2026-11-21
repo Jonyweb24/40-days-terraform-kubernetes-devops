@@ -1,0 +1,9 @@
+SERVICE inventory
+      
+Service Name: database
+
+Service Index: 2
+
+Project: ecommerce
+
+Environment: development

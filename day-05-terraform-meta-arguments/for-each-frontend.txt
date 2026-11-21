@@ -1,0 +1,9 @@
+SERVICE CONFIGURATION 
+
+Service Name: frontend
+
+Service Port: 80
+
+Project: ecommerce
+
+Environment: development

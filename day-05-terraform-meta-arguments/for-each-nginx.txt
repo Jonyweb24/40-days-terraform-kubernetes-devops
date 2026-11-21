@@ -1,0 +1,9 @@
+SERVICE CONFIGURATION 
+
+Service Name: nginx
+
+Service Port: 8080
+
+Project: ecommerce
+
+Environment: development

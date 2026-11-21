@@ -1,0 +1,9 @@
+SERVICE inventory
+      
+Service Name: nginx
+
+Service Index: 4
+
+Project: ecommerce
+
+Environment: development

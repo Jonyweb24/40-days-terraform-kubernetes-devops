@@ -1,0 +1,9 @@
+SERVICE CONFIGURATION 
+
+Service Name: redis
+
+Service Port: 6379
+
+Project: ecommerce
+
+Environment: development

@@ -1,0 +1,9 @@
+SERVICE inventory
+      
+Service Name: redis
+
+Service Index: 3
+
+Project: ecommerce
+
+Environment: development

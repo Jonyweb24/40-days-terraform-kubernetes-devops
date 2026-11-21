@@ -1,0 +1,9 @@
+SERVICE CONFIGURATION 
+
+Service Name: database
+
+Service Port: 3305
+
+Project: ecommerce
+
+Environment: development

@@ -1,0 +1,9 @@
+SERVICE inventory
+      
+Service Name: frontend
+
+Service Index: 0
+
+Project: ecommerce
+
+Environment: development

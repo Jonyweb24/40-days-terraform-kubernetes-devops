@@ -1,0 +1,9 @@
+SERVICE inventory
+      
+Service Name: backend
+
+Service Index: 1
+
+Project: ecommerce
+
+Environment: development
