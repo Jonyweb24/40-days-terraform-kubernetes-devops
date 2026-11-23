@@ -1,0 +1,9 @@
+RELEASE MANIFEST
+
+Project: ecommerce
+
+Release Version: 1.0.0
+
+Environment: development
+
+Deployment Tier: STANDARD

@@ -1,0 +1,13 @@
+APPLICATION CONFIGURATION
+
+Application: ecommerce-development-application
+
+Project: ecommerce-development
+
+Network file: ./network_config.txt
+
+Database File: ./database-config.txt
+
+Deployment Tier: STANDARD
+
+Status: READY

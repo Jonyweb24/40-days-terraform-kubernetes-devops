@@ -1,0 +1,9 @@
+NETWORK CONFIGURATION
+
+Project: ecommerce-development
+
+Network Name: ecommerce-development-network
+
+Environment: development
+
+Status: Ready

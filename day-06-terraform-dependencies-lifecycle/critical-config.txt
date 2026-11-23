@@ -1,0 +1,9 @@
+CRITICAL CONFIGURATION
+
+Project: ecommerce
+
+Environment: development
+
+Protection: ENABLED
+
+Warning: Do not delete this configuration accidentally.

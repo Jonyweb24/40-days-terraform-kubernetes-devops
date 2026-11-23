@@ -1,0 +1,9 @@
+DATABASE CONFIGURATION
+
+Project: ecommerce-development
+
+Database Name: ecommerce-development-database
+
+Environment: development
+
+Status: READY

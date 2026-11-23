@@ -1,0 +1,9 @@
+DEPLOYMENT SUMMARY
+
+Project: ecommerce-development
+
+Environment: development
+
+Application: ecommerce-development-application
+
+Deployment Status: COMPLETED
