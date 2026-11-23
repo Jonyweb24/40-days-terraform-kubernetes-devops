@@ -133,3 +133,33 @@ Added *.txt, *.tfvars, *.tfstate*, .terraform/, and .terraform.lock.hcl to .giti
 Verified ignore rules using git check-ignore -v day-03-terraform-variables/terraform.tfvars.
 
 Re-staged and committed only source code, .tfvars.example, and documentation files.
+
+
+----
+DAY-05:
+# Day 05 Troubleshooting & Lessons Learned
+
+## 1. Wrong Namespace in `service_inventory_files` Output
+- **Symptom / Issue**: Referencing `local.service_inventory_files[*].filename` when `service_inventory_files` is a `local_file` resource rather than a local value in `locals.tf`.
+- **Root Cause**: Mismatched Terraform reference namespace (`local.*` vs. `local_file.*`).
+- **Fix**: Reference the resource directly: `local_file.service_inventory[*].filename`.
+
+## 2. Conditional Index Access on `monitoring_config`
+- **Symptom / Issue**: Direct indexing like `local_file.monitoring_config[0].filename` can be risky when `count` evaluates to `0` (`enable_monitoring = false`) during plan or refactoring edge cases.
+- **Root Cause**: Accessing index `0` on a zero-length resource collection.
+- **Fix**: Wrap the lookup safely using `try(local_file.monitoring_config[0].filename, "Monitoring disabled")`.
+
+## 3. `-var` Flag Reverts on Subsequent `terraform apply`
+- **Symptom / Issue**: Running `terraform apply -var="enable_monitoring=false"` showed `monitoring_status` changing from `"ENABLED"` to `"DISABLED"`, but a later plain `terraform apply` showed `"ENABLED"` again.
+- **Root Cause**: Command-line `-var` flags only override variables for that single invocation; `variables.tf` still had `default = true` (and the earlier apply wasn't completed/confirmed).
+- **Fix**: Set `default = false` in `variables.tf` or define `enable_monitoring = false` in `terraform.tfvars` for persistent behavior, and confirm `yes` when applying changes.
+
+## 4. `count` Index Shifting When Removing List Elements
+- **Symptom / Issue**: Removing an item from the middle of a list (e.g., `"backend"` from `["frontend", "backend", "database"]`) shifts indices (`[1]` becomes `"database"`), risking unintended updates or replacements.
+- **Root Cause**: `count` tracks resource instances by numeric index rather than item identity.
+- **Fix**: Use `for_each = toset(var.services)` (or a map) when items have distinct identities so removing one element does not shift other keys.
+
+## 5. Lab Folder Created Outside the Cloned Git Repository
+- **Symptom / Issue**: The `day-05-terraform-meta-arguments` directory was created outside `40-days-terraform-kubernetes-devops`.
+- **Root Cause**: Creating a standalone lab folder before opening/cloning the target Git repository.
+- **Fix*: Clone the repository, copy the folder inside using `cp -r`, then run `git add`, `git commit`, and `git push origin main`
