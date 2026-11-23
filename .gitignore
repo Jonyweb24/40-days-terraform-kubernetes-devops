@@ -28,3 +28,6 @@ override.tf.json
 .DS_Store
 Thumbs.db
 .vscode/
+# Terraform state backups
+*-state-backup*.json
+day-07-before-*.json

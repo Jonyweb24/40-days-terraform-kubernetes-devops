@@ -37,10 +37,9 @@ output "critical_config_file" {
   description = "Protected configuration file"
   value       = local_file.critical_config.filename
 }
-
-output "manual_notes_file" {
+output "deployment_notes_filename" {
   description = "Manual notes file"
-  value       = local_file.manual_notes.filename
+  value       = local_file.deployment_notes.filename
 }
 
 # Advanced 

@@ -118,7 +118,7 @@ resource "local_file" "critical_config" {
 }
 
 # Resource 7 - Manual Notes
-resource "local_file" "manual_notes" {
+resource "local_file" "deployment_notes" {
   filename = "${path.module}/manual-notes.txt"
 
   content = var.manual_note_content
