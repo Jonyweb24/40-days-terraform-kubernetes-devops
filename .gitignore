@@ -28,6 +28,13 @@ override.tf.json
 .DS_Store
 Thumbs.db
 .vscode/
+<<<<<<< HEAD
 # Terraform state backups
+=======
+# Terraform local backup
+**/backups/
+
+# Day 7/8 state backup JSON
+>>>>>>> aed322c (Day 08: Terraform state backup and drift detection)
 *-state-backup*.json
 day-07-before-*.json

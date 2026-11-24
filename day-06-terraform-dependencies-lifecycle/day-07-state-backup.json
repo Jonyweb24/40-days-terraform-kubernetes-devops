@@ -1,0 +1,395 @@
+{
+  "version": 4,
+  "terraform_version": "1.17.2",
+  "serial": 15,
+  "lineage": "df5fc62e-eeea-879b-5c4e-f0bfddee9d84",
+  "outputs": {
+    "application_file": {
+      "value": "./application-configuration.txt",
+      "type": "string"
+    },
+    "critical_config_file": {
+      "value": "./critical-config.txt",
+      "type": "string"
+    },
+    "database_file": {
+      "value": "./database-config.txt",
+      "type": "string"
+    },
+    "deployment_summary_file": {
+      "value": "./deployment-summary.txt",
+      "type": "string"
+    },
+    "deployment_tier": {
+      "value": "STANDARD",
+      "type": "string"
+    },
+    "deployment_tracker": {
+      "value": {
+        "environment": "development",
+        "project": "ecommerce",
+        "version": "1.0.0"
+      },
+      "type": [
+        "object",
+        {
+          "environment": "string",
+          "project": "string",
+          "version": "string"
+        }
+      ]
+    },
+    "manual_notes_file": {
+      "value": "./manual-notes.txt",
+      "type": "string"
+    },
+    "network_file": {
+      "value": "./network_config.txt",
+      "type": "string"
+    },
+    "project_identifier": {
+      "value": "ecommerce-development",
+      "type": "string"
+    },
+    "release_file": {
+      "value": "./release-v1.txt",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "application_config",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "APPLICATION CONFIGURATION\n\nApplication: ecommerce-development-application\n\nProject: ecommerce-development\n\nNetwork file: ./network_config.txt\n\nDatabase File: ./database-config.txt\n\nDeployment Tier: STANDARD\n\nStatus: READY\n",
+            "content_base64": null,
+            "content_base64sha256": "b87GwNNjCiBxBjvjvnxT/CUYCEtaNeDprXig+iz1Mw4=",
+            "content_base64sha512": "Mt0SH1HLDgd5Jmg0+umbr83CxuSAcxxR0HKjwtZJQzDpNif5g/rGFnwb/jBqmFQJC2WuQcLCZeQsULK7VJguiQ==",
+            "content_md5": "94fd96cc50159f3f071e0aef4c62ebe2",
+            "content_sha1": "bf6558700f3c05ad7bec9b34beb3b57ba33b12b3",
+            "content_sha256": "6fcec6c0d3630a2071063be3be7c53fc2518084b5a35e0e9ad78a0fa2cf5330e",
+            "content_sha512": "32dd121f51cb0e0779266834fae99bafcdc2c6e480731c51d072a3c2d6494330e93627f983fac6167c1bfe306a9854090b65ae41c2c265e42c50b2bb54982e89",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./application-configuration.txt",
+            "id": "bf6558700f3c05ad7bec9b34beb3b57ba33b12b3",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "dependencies": [
+            "local_file.database_config",
+            "local_file.network_config"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "critical_config",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "CRITICAL CONFIGURATION\n\nProject: ecommerce\n\nEnvironment: development\n\nProtection: ENABLED\n\nWarning: Do not delete this configuration accidentally.\n",
+            "content_base64": null,
+            "content_base64sha256": "SadVhlyzCd0M/CxUiyTSabTweJvp1ewWwBgYJPTrS/w=",
+            "content_base64sha512": "n0O7Sz/gW61URVdazaSzmSRjP3y2cJk9oJfbtB3u9g4RtaYKlOB1j6od9vKSGd0YSlsMlAIWPArBRepTJDnDiA==",
+            "content_md5": "713457d8bc833e123463d6070b06b041",
+            "content_sha1": "f98add7501b41751135c8f97aab4d64843057165",
+            "content_sha256": "49a755865cb309dd0cfc2c548b24d269b4f0789be9d5ec16c0181824f4eb4bfc",
+            "content_sha512": "9f43bb4b3fe05bad5445575acda4b39924633f7cb670993da097dbb41deef60e11b5a60a94e0758faa1df6f29219dd184a5b0c9402163c0ac145ea532439c388",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./critical-config.txt",
+            "id": "f98add7501b41751135c8f97aab4d64843057165",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "database_config",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "DATABASE CONFIGURATION\n\nProject: ecommerce-development\n\nDatabase Name: ecommerce-development-database\n\nEnvironment: development\n\nStatus: READY\n",
+            "content_base64": null,
+            "content_base64sha256": "U8h4L2mn3DYa4tdhKY0Dt+mX80vZ9WBz6NUoAKAN+UY=",
+            "content_base64sha512": "62M5fx7JkEPCONp7jPm7Y8OqAM7wyrrNJLZejdb/VkenhzWXERgEXnliQ/jakgoLajk5Z2gznEttyktGMI7VPQ==",
+            "content_md5": "45db4b2a1fa7b0e38824661b9f240931",
+            "content_sha1": "938dd8d3699650db39af6738226ee332fecd2c1f",
+            "content_sha256": "53c8782f69a7dc361ae2d761298d03b7e997f34bd9f56073e8d52800a00df946",
+            "content_sha512": "eb63397f1ec99043c238da7b8cf9bb63c3aa00cef0cabacd24b65e8dd6ff5647a78735971118045e796243f8da920a0b6a39396768339c4b6dca4b46308ed53d",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./database-config.txt",
+            "id": "938dd8d3699650db39af6738226ee332fecd2c1f",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "deployment_summary",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "DEPLOYMENT SUMMARY\n\nProject: ecommerce-development\n\nEnvironment: development\n\nApplication: ecommerce-development-application\n\nDeployment Status: COMPLETED\n",
+            "content_base64": null,
+            "content_base64sha256": "aMIDRFyUxEs0JJOn/dDOxJEIcsbqWDHYt5QL4hyynfY=",
+            "content_base64sha512": "v3co/7ibOTVZ9iipu0n66SNGT/9EytPSO/Mp/EnafxDyWWyAO3GhG28l6rPOsqck/yzo/IDsvAMuj7232u5uoQ==",
+            "content_md5": "7e00fffa108380693f63980fa7f8e3cb",
+            "content_sha1": "a1c4790e63b561c5c5c235d8caf46607d8a077c2",
+            "content_sha256": "68c203445c94c44b342493a7fdd0cec4910872c6ea5831d8b7940be21cb29df6",
+            "content_sha512": "bf7728ffb89b393559f628a9bb49fae923464fff44cad3d23bf329fc49da7f10f2596c803b71a11b6f25eab3ceb2a724ff2ce8fc80ecbc032e8fbdb7daee6ea1",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./deployment-summary.txt",
+            "id": "a1c4790e63b561c5c5c235d8caf46607d8a077c2",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "dependencies": [
+            "local_file.application_config",
+            "local_file.database_config",
+            "local_file.network_config"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "manual_notes",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "Initial deployment note",
+            "content_base64": null,
+            "content_base64sha256": "60pVoccYM2qlrT7j70aM8aVy5NUMPMJg4DGMEjqjK3s=",
+            "content_base64sha512": "WtCswe5gHz6LgZqr2pQEHP0ZpYW/2e3DzXXeBuO7+0k0EsoxF16sWQa+dd2z0+UecAC6KVJT7M2xtjlKKRZ31A==",
+            "content_md5": "2891209aabb735f3d40ce2b8ed82d718",
+            "content_sha1": "582e13869a8ac732e18bd86bb5d0f62354827bf2",
+            "content_sha256": "eb4a55a1c718336aa5ad3ee3ef468cf1a572e4d50c3cc260e0318c123aa32b7b",
+            "content_sha512": "5ad0acc1ee601f3e8b819aabda94041cfd19a585bfd9edc3cd75de06e3bbfb493412ca31175eac5906be75ddb3d3e51e7000ba295253eccdb1b6394a291677d4",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./manual-notes.txt",
+            "id": "582e13869a8ac732e18bd86bb5d0f62354827bf2",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "network_config",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "NETWORK CONFIGURATION\n\nProject: ecommerce-development\n\nNetwork Name: ecommerce-development-network\n\nEnvironment: development\n\nStatus: Ready\n",
+            "content_base64": null,
+            "content_base64sha256": "PkTGiYqUgXsE+xzp6/v//wT/Z7nsREk+9QxkzKKSOkg=",
+            "content_base64sha512": "wtJiXJuJNh+RvC0WSK6uNzAEk1+4sGGvmH0C/h1AM4kj3SCXWtsCW08mlIqj3bI/4CMZeCL8SSa4lrn8TYilvw==",
+            "content_md5": "99477a2e51e68c574f370469a18ae728",
+            "content_sha1": "3a4b5203c16259ebc73ff9924be3e1b4d6a1422b",
+            "content_sha256": "3e44c6898a94817b04fb1ce9ebfbffff04ff67b9ec44493ef50c64cca2923a48",
+            "content_sha512": "c2d2625c9b89361f91bc2d1648aeae373004935fb8b061af987d02fe1d40338923dd20975adb025b4f26948aa3ddb23fe023197822fc4926b896b9fc4d88a5bf",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./network_config.txt",
+            "id": "3a4b5203c16259ebc73ff9924be3e1b4d6a1422b",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "local_file",
+      "name": "release_manifest",
+      "provider": "provider[\"registry.terraform.io/hashicorp/local\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "content": "RELEASE MANIFEST\n\nProject: ecommerce\n\nRelease Version: 1.0.0\n\nEnvironment: development\n\nDeployment Tier: STANDARD\n",
+            "content_base64": null,
+            "content_base64sha256": "FJmetcI1Vt/H2+qy/IT5VgVc7UiBJ5/6Y73KkIBzGF8=",
+            "content_base64sha512": "G6tvo2GqesP4h24RVelybtA8Vpg8fO6BzCcQFfr1nVyc8RepBGaI+8o8JcBRsUoP+ZuhapELtCTawyZnu/a1aw==",
+            "content_md5": "5eeb349f9c1add0603458c5272924c35",
+            "content_sha1": "da7e776a4b8311bfb764dc07be29d0912445be02",
+            "content_sha256": "14999eb5c23556dfc7dbeab2fc84f956055ced4881279ffa63bdca908073185f",
+            "content_sha512": "1bab6fa361aa7ac3f8876e1155e9726ed03c56983c7cee81cc271015faf59d5c9cf117a9046688fbca3c25c051b14a0ff99ba16a910bb424dac32667bbf6b56b",
+            "directory_permission": "0777",
+            "file_permission": "0777",
+            "filename": "./release-v1.txt",
+            "id": "da7e776a4b8311bfb764dc07be29d0912445be02",
+            "sensitive_content": null,
+            "source": null
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "sensitive_content"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "create_before_destroy": true
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "terraform_data",
+      "name": "deployment_tracker",
+      "provider": "provider[\"terraform.io/builtin/terraform\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "6119c62d-d45e-4b9a-ae56-c46e8ed3dee3",
+            "input": {
+              "value": {
+                "environment": "development",
+                "project": "ecommerce",
+                "version": "1.0.0"
+              },
+              "type": [
+                "object",
+                {
+                  "environment": "string",
+                  "project": "string",
+                  "version": "string"
+                }
+              ]
+            },
+            "output": {
+              "value": {
+                "environment": "development",
+                "project": "ecommerce",
+                "version": "1.0.0"
+              },
+              "type": [
+                "object",
+                {
+                  "environment": "string",
+                  "project": "string",
+                  "version": "string"
+                }
+              ]
+            },
+            "store": null,
+            "triggers_replace": {
+              "value": [
+                "1.0.0"
+              ],
+              "type": [
+                "tuple",
+                [
+                  "string"
+                ]
+              ]
+            }
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    }
+  ],
+  "check_results": [
+    {
+      "object_kind": "var",
+      "config_addr": "var.environment",
+      "status": "pass",
+      "objects": [
+        {
+          "object_addr": "var.environment",
+          "status": "pass"
+        }
+      ]
+    }
+  ]
+}
+
