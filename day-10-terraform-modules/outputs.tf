@@ -30,3 +30,14 @@ output "service_details" {
     name => service.service_details
   }
 }
+
+# advanced  challenge
+
+output "total_replicas" {
+  description = "Total replicas across all services"
+
+  value = sum([
+    for service in values(var.services) :
+    service.replicas
+  ])
+}
