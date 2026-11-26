@@ -1,0 +1,15 @@
+SERVICE CONFIGURATION
+
+Project: DevOps Module Project
+
+Environment: development
+
+Service Name: backend
+
+Description: Node.js backend API
+
+Port: 8080
+
+Replicas: 3
+
+Status: ACTIVE

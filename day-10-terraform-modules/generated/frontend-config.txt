@@ -1,0 +1,15 @@
+SERVICE CONFIGURATION
+
+Project: DevOps Module Project
+
+Environment: development
+
+Service Name: frontend
+
+Description: React frontend application
+
+Port: 3000
+
+Replicas: 2
+
+Status: ACTIVE

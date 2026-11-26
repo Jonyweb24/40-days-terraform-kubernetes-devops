@@ -1,0 +1,15 @@
+SERVICE CONFIGURATION
+
+Project: DevOps Module Project
+
+Environment: development
+
+Service Name: database
+
+Description: PostgreSQL database
+
+Port: 5432
+
+Replicas: 1
+
+Status: ACTIVE
